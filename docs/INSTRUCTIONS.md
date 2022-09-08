@@ -1,8 +1,3 @@
-<!--
-De conventie voor naamgeving is sprintnaam-(sub)taaknaam
-Topics: (sub)task semester-naam, semesternummer, sprint-naam, sprint-nummer
--->
-
 # your-tribe-for-life-profile-card
 
 Redesign je visitekaartje op basis van een headless CMS en een framework.
