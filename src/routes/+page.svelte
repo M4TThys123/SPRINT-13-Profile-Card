@@ -1,57 +1,161 @@
 <script>
-	import Counter from '$lib/Counter.svelte';
+	// import * as prismicH from "@prismicio/helpers"
+	export let data
+	const pris = data.documents[0].data
+
+	console.log(pris)
+
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
-
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
+<main class="background-image">
+	<section class="section-img">   
+        <div class="card-wrapper">
+            <div class="card-header">
+                <span id="type"></span>
+                <a href="">                <h1 id="nickname">{pris.name}</h1>
+                </a>
+            </div>
+            <div class="card-discription flex">
+                <div>
+                    <div class="discription">Typing Speed</div>
+                    <span>{pris.typing_speed}</span>
+                </div>
+                <span class="devider">|</span>
+                <div>
+                    <div class="discription">Warzone K/D</div>
+                    <span>{pris.kd}</span>
+                </div>
+            </div>
+            <div class="card-footer flex">
+                <div class="info flex">
+                    <img src="https://avatars.githubusercontent.com/u/70703948?v=4" alt="" id="avatarIMG">
+                    <h2 id="naam">{pris.name1}</h2>
+                </div>
+                    <i class='bx bxl-github github'></i>
+            </div>
+        </div>
+    </section>
+</main>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-	}
+:root {
+    /*========== Colors ==========*/
+    --dark-green: #014040;
+    --green: #02735e;
+    --light-green: #03a678;
+    --orange: #f27405;
+    --red: #731702;
+    --white: #ffffff;
+  
+      /*========== Margenes Bottom ==========*/
+      --mb-0-25: .25rem;
+      --mb-0-5: .5rem;
+      --mb-0-75: .75rem;
+      --mb-1: 1rem;
+      --mb-1-5: 1.5rem;
+      --mb-2: 2rem;
+      --mb-2-5: 2.5rem;
+  }
+  .flex{
+    display: flex;
+  }
+  
+  :global(*) {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .background-image {
+    font-family: "SF Pro Text", sans-serif;
+    font-weight: regular;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-	h1 {
-		width: 100%;
-	}
+.background-image{
+    background-image: url(../afb/background.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  
+}
 
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
+section{
+    background: linear-gradient(180deg,#fff,hsla(0,0%,100%,0)),#fff;
+    box-shadow: 0 4px 40px rgba(0,0,0,.1);
+    border-radius: 15px;
+    overflow: hidden;
+    -webkit-box-shadow: -8px 9px 34px 2px rgba(242,116,5,0.8); 
+box-shadow: -8px 9px 34px 2px rgba(242,116,5,0.8);
+}
+.section-img{
+    width: 400.99px;
+    height: 611.48px;
+    /* background-color: #014040; */
+    background-image: url(../afb/NFT-v2.webp);
+    background-size: cover;
 
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
+    z-index: 100;
+}
+
+.card-wrapper{
+    margin-top: 350px;
+    padding: 12px 24px 32px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,#fff,hsla(0,0%,100%,0)),#fff;
+    -webkit-box-shadow: -1px -11px 20px -4px rgba(242,116,5,0.8); 
+    box-shadow: -1px -11px 20px -4px rgba(242,116,5,0.8);
+}
+.card-discription{
+  align-items: center;
+  margin-top: 1em;
+}
+
+.card-discription span{
+ color: #f27405;
+}
+
+a{
+  margin-top: 1em;
+}
+.discription{
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+
+.devider{
+  font-size: 2.5em;
+  padding: 0 .2em;
+}
+#avatarIMG{
+  border-radius: 50%;
+  box-sizing: border-box;
+  width: 3em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: .25em;
+}
+.info{ 
+  align-items: center;
+}
+.github{
+  font-size: 3em;
+}
+.card-footer{
+  justify-content: space-between;
+  margin-top: 4.5em;
+}
+
+  </style>
