@@ -1,3 +1,18 @@
+Welcome to the SPRINT-13-Profile-Card wiki!
+
+🧭 Navigeer door deze wiki heen.
+* [👀 Analyseren](https://github.com/M4TThys123/SPRINT-13-Profile-Card/wiki/%F0%9F%91%80-Analyseren)
+* [🎨 Ontwerpen](https://github.com/M4TThys123/SPRINT-13-Profile-Card/wiki/%F0%9F%8E%A8-Ontwerpen)
+* [🔨 Bouwen](https://github.com/M4TThys123/SPRINT-13-Profile-Card/wiki/%F0%9F%94%A8-Bouwen)
+* [⚙️ Intergreren](https://github.com/M4TThys123/SPRINT-13-Profile-Card/wiki/%E2%9A%99%EF%B8%8F-Integreren)
+* [✨ Testen](https://github.com/M4TThys123/SPRINT-13-Profile-Card/wiki/%E2%9C%A8-Testen)
+
+🧭 Navigeer door deze repository heen.
+* [💻 Code](https://github.com/M4TThys123/SPRINT-13-Profile-Card)
+* [🛑 Issues](https://github.com/M4TThys123/SPRINT-13-Profile-Card/issues)
+* [📕 Project-Board](https://github.com/users/M4TThys123/projects/3/views/1)
+* [🌐 Live Versie](https://profile-card-gold-five.vercel.app/)
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
